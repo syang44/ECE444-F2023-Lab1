@@ -20,14 +20,14 @@ def index():
             flash('Looks like you have changed your name!')
         session['name'] = form.name.data
 
-        # old_email = session.get('email')
-        # if old_email is not None and old_email != form.name.data:
-        #     flash('Looks like you have changed your email!')
-        # session['email'] = form.email.data
+        old_email = session.get('email')
+        if old_email is not None and old_email != form.name.data:
+            flash('Looks like you have changed your email!')
+        session['email'] = form.email.data
 
         return redirect(url_for('index'))
         
-    return render_template('index.html', form=form, name=session.get('name'))#, email=session.get('email'))
+    return render_template('index.html', form=form, name=session.get('name'), email=session.get('email'))
 
 @app.route('/user/<name>') 
 def user(name): 
@@ -43,7 +43,7 @@ def internal_server_error(e):
 
 class NameForm(FlaskForm):
     name = StringField('What is your name?', validators=[DataRequired()])
-    #email = StringField('What is your UofT email address?', validators=[DataRequired(), Email()])
+    email = StringField('What is your UofT email address?', validators=[DataRequired(), Email()])
     submit = SubmitField('Submit')
 
 
