@@ -9,5 +9,9 @@ https://github.com/miguelgrinberg/flasky
 # Activity 2
 <img width="507" alt="Activity 2" src="https://github.com/syang44/ECE444-F2023-Lab1/assets/81589347/cf88f40c-b96e-447a-82ff-3fad81974bc8">
 
+# Activity 3
+<img width="1201" alt="Activity 3" src="https://github.com/syang44/ECE444-F2023-Lab1/assets/81589347/7ef3153b-a7bf-4a14-aa2b-4f71bd56b923">
+
+
 
 
